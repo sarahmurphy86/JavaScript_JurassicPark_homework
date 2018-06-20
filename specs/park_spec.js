@@ -24,26 +24,26 @@ describe('Park', function() {
   });
 
   it('should have a collection of dinosaurs', function(){
-    const actual = park.dinosaurs;
+    const actual = park.collection;
     assert.deepStrictEqual([], actual)
   });
 
   it('should be able to add a dinosaur to its collection', function(){
     park.addDinosaur(dinosaur)
-    const actual = park.dinosaurs[0]
+    const actual = park.collection[0]
     assert.deepStrictEqual(dinosaur, actual)
   });
 
   it('should be able to remove a dinosaur from its collection', function(){
     park.addDinosaur(dinosaur)
     park.removeDinosaur()
-    const actual = park.dinosaurs;
+    const actual = park.collection;
     assert.deepStrictEqual([], actual)
   });
 
 // add dinosaurs to Park
 // loop through park and find dinosaur with the highest guests attracted per guestsAttractedPerDay
- // return thr dinosuar
+ // return the dinosuar
   // it('should be able to find the dinosaur that attracts the most visitors', function(){
   //   park.addDinosaur(dinosaur)
   //   park.addDinosaur(dinosaur1)
@@ -51,20 +51,20 @@ describe('Park', function() {
   //   assert.strictEqual(dinosaur.name, actual)
   // });
 
-
+  //
   it('should be able to find all dinosaurs of a particular species', function(){
     park.addDinosaur(dinosaur)
     park.addDinosaur(dinosaur1)
-    const actual = park.dinosaurs.findSpecies('t-rex');
-    assert.strictEqual([dinosaur1], actual)
+    const actual = park.collection.findSpecies('t-rex');
+    assert.strictEqual([1], actual)
   });
-
-
-
-  it('should be able to remove all dinosaurs of a particular species', function(){
-    park.addDinosaur(dinosaur)
-    park.addDinosaur(dinosaur1)
-    
-  });
+  //
+  //
+  //
+  // it('should be able to remove all dinosaurs of a particular species', function(){
+  //   park.addDinosaur(dinosaur)
+  //   park.addDinosaur(dinosaur1)
+  //
+  // });
 
 });
